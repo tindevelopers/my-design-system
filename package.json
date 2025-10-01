@@ -1,6 +1,6 @@
 {
   "name": "@tindeveloper/design-system",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Unified component library combining Tailwind UI, TailAdmin, and Catalyst UI components for Builder.io",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
