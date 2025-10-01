@@ -4,6 +4,11 @@
   "description": "Unified component library combining Tailwind UI, TailAdmin, and Catalyst UI components for Builder.io",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

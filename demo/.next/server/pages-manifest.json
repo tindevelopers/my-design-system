@@ -1,16 +1,11 @@
 {
-  "/admin": "pages/admin.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/saas-admin": "pages/saas-admin.html",
-  "/saas-admin/analytics": "pages/saas-admin/analytics.html",
-  "/": "pages/index.html",
-  "/account-settings": "pages/account-settings.html",
-  "/saas-admin/users": "pages/saas-admin/users.html",
-  "/simple-admin": "pages/simple-admin.html",
-  "/saas-admin/organizations": "pages/saas-admin/organizations.html",
-  "/test": "pages/test.html",
-  "/user-profile": "pages/user-profile.html",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js",
+  "/saas-admin": "pages/saas-admin.js",
+  "/saas-admin/organizations": "pages/saas-admin/organizations.js",
+  "/saas-admin/analytics": "pages/saas-admin/analytics.js",
+  "/account-settings": "pages/account-settings.js",
+  "/saas-admin/users": "pages/saas-admin/users.js"
 }

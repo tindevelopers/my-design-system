@@ -1,102 +1,57 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-42372ed130431b0a.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/G-cqn44Ci3jrrswuodQDS/_buildManifest.js",
-    "static/G-cqn44Ci3jrrswuodQDS/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
     "/": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/pages/index-9d2c158e81964443.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/css/1227b559c973b89d.css",
-      "static/chunks/pages/_app-db493b867170d726.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/pages/_error-5366f00fee9a89ba.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/account-settings": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/account-settings-6a1b0cfbafd8f7a7.js"
-    ],
-    "/admin": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/pages/admin-746b1ba7b0630de2.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/account-settings.js"
     ],
     "/saas-admin": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/saas-admin-73c220c068653f3d.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/saas-admin.js"
     ],
     "/saas-admin/analytics": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/saas-admin/analytics-aef23aadbe6ff3f8.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/saas-admin/analytics.js"
     ],
     "/saas-admin/organizations": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/saas-admin/organizations-9b6758f586d80c37.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/saas-admin/organizations.js"
     ],
     "/saas-admin/users": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/saas-admin/users-5c143e7d7fe83be7.js"
-    ],
-    "/simple-admin": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/pages/simple-admin-8b6da859bfb97e1a.js"
-    ],
-    "/test": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/test-77aad8be6f987dd1.js"
-    ],
-    "/user-profile": [
-      "static/chunks/webpack-fbb920bddf9bf0a6.js",
-      "static/chunks/framework-a6e0b7e30f98059a.js",
-      "static/chunks/main-964c0feb6ced71f5.js",
-      "static/chunks/07c2d338-b54404d02114690f.js",
-      "static/chunks/146-ed7ece0b135ac6f6.js",
-      "static/chunks/pages/user-profile-18289f6b18896cc1.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/saas-admin/users.js"
     ]
   },
   "ampFirstPages": []
