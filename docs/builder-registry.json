@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Component Registry",
+  "description": "Machine-readable catalog of all components available for Builder.io",
+  "version": "1.0.0",
+  "components": [
+    {
+      "id": "button-example",
+      "name": "Button",
+      "displayName": "TailwindUI Button",
+      "source": "tailwindui",
+      "filePath": "components/tailwindui/button.tsx",
+      "category": "Forms",
+      "description": "A customizable button component with multiple variants and sizes",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "required": true,
+          "defaultValue": "Click Me",
+          "description": "Button text to display"
+        },
+        {
+          "name": "variant",
+          "type": "enum",
+          "enum": ["primary", "secondary", "outline"],
+          "required": false,
+          "defaultValue": "primary",
+          "description": "Visual style variant"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "enum": ["sm", "md", "lg"],
+          "required": false,
+          "defaultValue": "md",
+          "description": "Button size"
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Click event handler"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "description": "Whether button is disabled"
+        }
+      ],
+      "tags": ["button", "form", "interactive"],
+      "builderConfig": {
+        "name": "TailwindUI Button",
+        "image": "https://via.placeholder.com/150x100?text=Button",
+        "canHaveChildren": false
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "forms",
+      "name": "Forms",
+      "description": "Form inputs and controls"
+    },
+    {
+      "id": "navigation",
+      "name": "Navigation",
+      "description": "Navigation menus and links"
+    },
+    {
+      "id": "layout",
+      "name": "Layout",
+      "description": "Page layout and structure components"
+    },
+    {
+      "id": "data-display",
+      "name": "Data Display",
+      "description": "Tables, lists, and data visualization"
+    },
+    {
+      "id": "feedback",
+      "name": "Feedback",
+      "description": "Alerts, notifications, and modals"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "description": "Hero sections, CTAs, and landing page components"
+    }
+  ],
+  "sources": [
+    {
+      "id": "tailwindui",
+      "name": "Tailwind UI",
+      "url": "https://tailwindui.com",
+      "license": "Commercial"
+    },
+    {
+      "id": "tailadmin",
+      "name": "TailAdmin",
+      "url": "https://tailadmin.com",
+      "license": "Commercial"
+    },
+    {
+      "id": "custom",
+      "name": "Custom",
+      "description": "Custom-built components"
+    }
+  ]
+}
