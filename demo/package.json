@@ -11,7 +11,7 @@
   "dependencies": {
     "@builder.io/react": "^3.0.0",
     "@headlessui/react": "^2.2.9",
-        "@tindeveloper/design-system": "^1.0.5",
+        "@tindeveloper/design-system": "^1.0.6",
     "clsx": "^2.1.1",
     "next": "^15.5.4",
     "react": "^18.3.1",

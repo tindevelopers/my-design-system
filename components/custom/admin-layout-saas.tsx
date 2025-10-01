@@ -55,9 +55,20 @@ export const AdminLayoutSaaS: React.FC<AdminLayoutSaaSProps> = ({
         )}
       >
         <div className="flex items-center justify-center h-16 border-b border-gray-200 dark:border-gray-700">
-          <span className="text-2xl font-semibold whitespace-nowrap text-gray-900 dark:text-gray-100">
-            {isSidebarCollapsed ? 'AD' : 'Admin Panel'}
-          </span>
+          {isSidebarCollapsed ? (
+            <div className="flex items-center justify-center w-8 h-8 bg-blue-600 rounded-lg">
+              <span className="text-white font-bold text-sm">AP</span>
+            </div>
+          ) : (
+            <div className="flex items-center space-x-2">
+              <div className="flex items-center justify-center w-8 h-8 bg-blue-600 rounded-lg">
+                <span className="text-white font-bold text-sm">AP</span>
+              </div>
+              <span className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                Admin Panel
+              </span>
+            </div>
+          )}
         </div>
         <nav className="flex-1 p-4 overflow-y-auto">
           <ul>
@@ -90,10 +101,10 @@ export const AdminLayoutSaaS: React.FC<AdminLayoutSaaSProps> = ({
       <div className="flex-1 flex flex-col transition-all duration-300 ease-in-out">
         {/* Header */}
         <header className="flex items-center justify-between h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 shadow-sm">
-          <div className="flex items-center">
+          <div className="flex items-center min-w-0 flex-1">
             <button
               onClick={toggleSidebar}
-              className="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 md:hidden"
+              className="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 md:hidden mr-2"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -101,15 +112,15 @@ export const AdminLayoutSaaS: React.FC<AdminLayoutSaaSProps> = ({
             </button>
             <button
               onClick={toggleSidebar}
-              className="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block"
+              className="text-gray-500 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block mr-2"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            <h1 className="text-xl font-semibold ml-4 text-gray-900 dark:text-gray-100">{pageTitle}</h1>
+            <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100 truncate">{pageTitle}</h1>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 min-w-0">
             {headerActions}
             {/* Dark Mode Toggle */}
             <button
@@ -137,10 +148,10 @@ export const AdminLayoutSaaS: React.FC<AdminLayoutSaaSProps> = ({
             {/* User Profile Dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <Menu.Button className="flex max-w-xs items-center rounded-full bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <Menu.Button className="flex items-center rounded-full bg-white dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 max-w-xs">
                   <span className="sr-only">Open user menu</span>
                   <img 
-                    className="h-8 w-8 rounded-full object-cover" 
+                    className="h-8 w-8 rounded-full object-cover flex-shrink-0" 
                     src={userInfo.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(userInfo.name)}&background=6366f1&color=fff&size=32`} 
                     alt={userInfo.name}
                     onError={(e) => {
@@ -148,8 +159,8 @@ export const AdminLayoutSaaS: React.FC<AdminLayoutSaaSProps> = ({
                       target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(userInfo.name)}&background=6366f1&color=fff&size=32`;
                     }}
                   />
-                  <span className="ml-2 text-gray-700 dark:text-gray-300 hidden lg:block">{userInfo.name}</span>
-                  <svg className="ml-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <span className="ml-2 text-gray-700 dark:text-gray-300 hidden lg:block truncate max-w-32">{userInfo.name}</span>
+                  <svg className="ml-1 h-5 w-5 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                   </svg>
                 </Menu.Button>

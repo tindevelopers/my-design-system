@@ -230,7 +230,7 @@ const SaasAdminOrganizationsPage: React.FC = () => {
                 <option>Trial</option>
                 <option>Suspended</option>
               </select>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors whitespace-nowrap">
                 Filter
               </button>
             </div>
@@ -275,7 +275,9 @@ const SaasAdminOrganizationsPage: React.FC = () => {
                             alt={org.name}
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(org.name)}&background=random&color=fff&size=40`;
+                              const colors = ['6366f1', '3b82f6', '10b981', 'f59e0b', 'ef4444', '8b5cf6'];
+                              const color = colors[org.id % colors.length];
+                              target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(org.name)}&background=${color}&color=fff&size=40&bold=true`;
                             }}
                           />
                         </div>

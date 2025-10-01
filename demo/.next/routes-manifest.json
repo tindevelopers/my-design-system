@@ -1,1 +1,101 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/account-settings",
+      "regex": "^/account\\-settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/account\\-settings(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/saas-admin",
+      "regex": "^/saas\\-admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/saas\\-admin(?:/)?$"
+    },
+    {
+      "page": "/saas-admin/analytics",
+      "regex": "^/saas\\-admin/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/saas\\-admin/analytics(?:/)?$"
+    },
+    {
+      "page": "/saas-admin/organizations",
+      "regex": "^/saas\\-admin/organizations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/saas\\-admin/organizations(?:/)?$"
+    },
+    {
+      "page": "/saas-admin/users",
+      "regex": "^/saas\\-admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/saas\\-admin/users(?:/)?$"
+    },
+    {
+      "page": "/simple-admin",
+      "regex": "^/simple\\-admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/simple\\-admin(?:/)?$"
+    },
+    {
+      "page": "/test",
+      "regex": "^/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test(?:/)?$"
+    },
+    {
+      "page": "/user-profile",
+      "regex": "^/user\\-profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user\\-profile(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
