@@ -1,0 +1,9 @@
+# TailAdmin Components
+
+Place TailAdmin components in this directory.
+
+Each component should:
+- Use TypeScript
+- Export a named component
+- Include TypeScript interface for props
+- Follow the project's coding standards (see .cursorrules)
