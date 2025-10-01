@@ -5,25 +5,24 @@
   "version": "1.0.0",
   "components": [
     {
-      "id": "button-example",
+      "id": "tailadmin-button",
       "name": "Button",
-      "displayName": "TailwindUI Button",
-      "source": "tailwindui",
-      "filePath": "components/tailwindui/button.tsx",
+      "displayName": "TailAdmin Button",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Button.tsx",
       "category": "Forms",
       "description": "A customizable button component with multiple variants and sizes",
       "props": [
         {
-          "name": "label",
+          "name": "children",
           "type": "string",
           "required": true,
-          "defaultValue": "Click Me",
-          "description": "Button text to display"
+          "description": "Button text or content"
         },
         {
           "name": "variant",
           "type": "enum",
-          "enum": ["primary", "secondary", "outline"],
+          "enum": ["primary", "secondary", "outline", "ghost"],
           "required": false,
           "defaultValue": "primary",
           "description": "Visual style variant"
@@ -37,12 +36,6 @@
           "description": "Button size"
         },
         {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Click event handler"
-        },
-        {
           "name": "disabled",
           "type": "boolean",
           "required": false,
@@ -52,8 +45,225 @@
       ],
       "tags": ["button", "form", "interactive"],
       "builderConfig": {
-        "name": "TailwindUI Button",
+        "name": "TailAdmin Button",
         "image": "https://via.placeholder.com/150x100?text=Button",
+        "canHaveChildren": false
+      }
+    },
+    {
+      "id": "tailadmin-badge",
+      "name": "Badge",
+      "displayName": "TailAdmin Badge",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Badge.tsx",
+      "category": "Data Display",
+      "description": "A badge component for displaying status, categories, or labels",
+      "props": [
+        {
+          "name": "children",
+          "type": "string",
+          "required": true,
+          "description": "Badge content"
+        },
+        {
+          "name": "variant",
+          "type": "enum",
+          "enum": ["light", "solid", "outline"],
+          "required": false,
+          "defaultValue": "light",
+          "description": "Visual style variant"
+        },
+        {
+          "name": "color",
+          "type": "enum",
+          "enum": ["primary", "success", "error", "warning", "info", "gray"],
+          "required": false,
+          "defaultValue": "primary",
+          "description": "Color theme"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "enum": ["xs", "sm", "md"],
+          "required": false,
+          "defaultValue": "md",
+          "description": "Badge size"
+        }
+      ],
+      "tags": ["badge", "status", "label"],
+      "builderConfig": {
+        "name": "TailAdmin Badge",
+        "image": "https://via.placeholder.com/150x100?text=Badge",
+        "canHaveChildren": false
+      }
+    },
+    {
+      "id": "tailadmin-input",
+      "name": "Input",
+      "displayName": "TailAdmin Input",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Input.tsx",
+      "category": "Forms",
+      "description": "A form input component with validation states and labels",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "required": false,
+          "description": "Input label"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "required": false,
+          "description": "Placeholder text"
+        },
+        {
+          "name": "type",
+          "type": "enum",
+          "enum": ["text", "email", "password", "number", "tel", "url"],
+          "required": false,
+          "defaultValue": "text",
+          "description": "Input type"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "description": "Required field"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "description": "Whether input is disabled"
+        }
+      ],
+      "tags": ["input", "form", "text"],
+      "builderConfig": {
+        "name": "TailAdmin Input",
+        "image": "https://via.placeholder.com/150x100?text=Input",
+        "canHaveChildren": false
+      }
+    },
+    {
+      "id": "tailadmin-card",
+      "name": "Card",
+      "displayName": "TailAdmin Card",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Card.tsx",
+      "category": "Layout",
+      "description": "A card component for grouping related content",
+      "props": [
+        {
+          "name": "children",
+          "type": "richText",
+          "required": false,
+          "description": "Card content"
+        },
+        {
+          "name": "hover",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "description": "Hover effect"
+        }
+      ],
+      "tags": ["card", "container", "layout"],
+      "builderConfig": {
+        "name": "TailAdmin Card",
+        "image": "https://via.placeholder.com/150x100?text=Card",
+        "canHaveChildren": true
+      }
+    },
+    {
+      "id": "tailadmin-avatar",
+      "name": "Avatar",
+      "displayName": "TailAdmin Avatar",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Avatar.tsx",
+      "category": "Data Display",
+      "description": "An avatar component for displaying user profile images",
+      "props": [
+        {
+          "name": "src",
+          "type": "file",
+          "required": false,
+          "description": "Image URL"
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "required": false,
+          "defaultValue": "User Avatar",
+          "description": "Alt text"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "enum": ["xs", "sm", "md", "lg", "xl", "2xl"],
+          "required": false,
+          "defaultValue": "md",
+          "description": "Avatar size"
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "enum": ["online", "offline", "busy", "away", "none"],
+          "required": false,
+          "defaultValue": "none",
+          "description": "Status indicator"
+        }
+      ],
+      "tags": ["avatar", "profile", "user"],
+      "builderConfig": {
+        "name": "TailAdmin Avatar",
+        "image": "https://via.placeholder.com/150x100?text=Avatar",
+        "canHaveChildren": false
+      }
+    },
+    {
+      "id": "tailadmin-alert",
+      "name": "Alert",
+      "displayName": "TailAdmin Alert",
+      "source": "tailadmin",
+      "filePath": "components/tailadmin/Alert.tsx",
+      "category": "Feedback",
+      "description": "An alert component for displaying important messages",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "enum": ["success", "error", "warning", "info"],
+          "required": true,
+          "description": "Alert type"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": "Alert title"
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "required": true,
+          "description": "Alert message"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "description": "Show close button"
+        }
+      ],
+      "tags": ["alert", "notification", "feedback"],
+      "builderConfig": {
+        "name": "TailAdmin Alert",
+        "image": "https://via.placeholder.com/150x100?text=Alert",
         "canHaveChildren": false
       }
     }
@@ -107,6 +317,102 @@
       "id": "custom",
       "name": "Custom",
       "description": "Custom-built components"
+    },
+    {
+      "name": "Catalyst Button",
+      "image": "https://via.placeholder.com/150x100?text=Catalyst+Button",
+      "inputs": [
+        {
+          "name": "children",
+          "type": "string",
+          "defaultValue": "Click Me",
+          "required": true
+        },
+        {
+          "name": "color",
+          "type": "string",
+          "enum": ["dark/zinc", "light", "dark/white", "dark", "white", "zinc", "indigo", "cyan", "red", "orange", "amber", "yellow", "lime", "green", "emerald", "teal", "sky", "blue", "violet", "purple", "fuchsia", "pink", "rose"],
+          "defaultValue": "dark/zinc"
+        },
+        {
+          "name": "outline",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "name": "plain",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Catalyst Input",
+      "image": "https://via.placeholder.com/150x100?text=Catalyst+Input",
+      "inputs": [
+        {
+          "name": "type",
+          "type": "string",
+          "enum": ["text", "email", "password", "number", "search", "tel", "url", "date", "datetime-local", "month", "time", "week"],
+          "defaultValue": "text"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "defaultValue": "Enter text..."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Catalyst Avatar",
+      "image": "https://via.placeholder.com/150x100?text=Catalyst+Avatar",
+      "inputs": [
+        {
+          "name": "src",
+          "type": "file"
+        },
+        {
+          "name": "alt",
+          "type": "string",
+          "defaultValue": "User Avatar"
+        },
+        {
+          "name": "initials",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "square",
+          "type": "boolean",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Catalyst Fieldset",
+      "image": "https://via.placeholder.com/150x100?text=Catalyst+Fieldset",
+      "inputs": [
+        {
+          "name": "children",
+          "type": "richText",
+          "defaultValue": "Form fields go here"
+        }
+      ]
     }
   ]
 }

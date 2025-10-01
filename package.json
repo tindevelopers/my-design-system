@@ -1,7 +1,7 @@
 {
-  "name": "my-design-system",
-  "version": "1.0.0",
-  "description": "Unified component library combining Tailwind UI and TailAdmin components",
+  "name": "@tindeveloper/design-system",
+  "version": "1.0.5",
+  "description": "Unified component library combining Tailwind UI, TailAdmin, and Catalyst UI components for Builder.io",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -14,15 +14,22 @@
     "components",
     "tailwind",
     "builder.io",
-    "design-system"
+    "design-system",
+    "tailadmin",
+    "catalyst-ui",
+    "react",
+    "typescript"
   ],
-  "author": "",
+  "author": "tindeveloper",
   "license": "MIT",
   "dependencies": {
     "@builder.io/react": "^3.2.0",
     "@builder.io/sdk": "^2.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@headlessui/react": "^2.2.9",
+    "clsx": "^2.1.1",
+    "motion": "^12.23.22",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

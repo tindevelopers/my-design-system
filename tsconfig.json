@@ -9,7 +9,8 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
+    "baseUrl": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -17,11 +18,15 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "components/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "examples"
+    "examples",
+    "src/tailadmin",
+    "src/catalyst-ui-kit/demo",
+    "tailadmin-next-typescript-pro-2.0-main"
   ]
 }

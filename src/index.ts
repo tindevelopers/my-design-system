@@ -5,7 +5,7 @@
  */
 
 // Export Builder.io registration
-export { default as registerAllComponents } from './builder-registry';
+export { registerAllComponents } from './builder-registry';
 
 // Export Tailwind UI Components
 // Uncomment and add as components are created
@@ -13,14 +13,44 @@ export { default as registerAllComponents } from './builder-registry';
 // export type { ButtonProps } from '../components/tailwindui/button';
 
 // Export TailAdmin Components
-// Uncomment and add as components are created
-// export { DashboardCard } from '../components/tailadmin/dashboard-card';
-// export type { DashboardCardProps } from '../components/tailadmin/dashboard-card';
+export * from '../components/tailadmin';
+
+// Export Catalyst UI Components with aliases to avoid conflicts
+export {
+  Button as CatalystButton,
+  Input as CatalystInput,
+  Avatar as CatalystAvatar,
+  Badge as CatalystBadge,
+  Alert as CatalystAlert,
+  Checkbox as CatalystCheckbox,
+  Select as CatalystSelect,
+  Fieldset,
+  Field,
+  Label,
+  Description,
+  ErrorMessage,
+  Switch as CatalystSwitch,
+  Table as CatalystTable,
+  Dialog as CatalystDialog,
+  Heading,
+  Text,
+  Textarea as CatalystTextarea,
+  Link as CatalystLink,
+  Divider,
+  Pagination as CatalystPagination,
+  Radio as CatalystRadio,
+  Listbox as CatalystListbox,
+  Combobox as CatalystCombobox,
+  Navbar as CatalystNavbar,
+  Sidebar as CatalystSidebar,
+  SidebarLayout as CatalystSidebarLayout,
+  StackedLayout as CatalystStackedLayout,
+  AuthLayout as CatalystAuthLayout,
+  DescriptionList as CatalystDescriptionList,
+} from './catalyst-ui-kit';
 
 // Export Custom Components
-// Uncomment and add as components are created
-// export { CustomHero } from '../components/custom/hero';
-// export type { CustomHeroProps } from '../components/custom/hero';
+export * from '../components/custom';
 
 // Version
 export const VERSION = '1.0.0';
