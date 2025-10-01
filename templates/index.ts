@@ -9,6 +9,9 @@ export { default as SaasAdminUsersPage } from './pages/saas-admin/users';
 export { default as SaasAdminOrganizationsPage } from './pages/saas-admin/organizations';
 export { default as SaasAdminAnalyticsPage } from './pages/saas-admin/analytics';
 
+// CRM Admin Dashboard
+export { default as CrmAdminPage } from './pages/crm-admin';
+
 // Re-export components for convenience
 export { AdminLayoutSaaS, SaasDashboard } from '@tindeveloper/design-system';
 
@@ -33,6 +36,14 @@ export const saasAdminTemplates = {
     path: '/saas-admin/analytics',
     component: 'SaasAdminAnalyticsPage',
     title: 'Analytics'
+  }
+};
+
+export const crmAdminTemplates = {
+  main: {
+    path: '/crm-admin',
+    component: 'CrmAdminPage',
+    title: 'CRM Dashboard'
   }
 };
 

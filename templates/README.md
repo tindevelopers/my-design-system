@@ -1,6 +1,6 @@
-# SaaS Admin Dashboard Templates
+# Admin Dashboard Templates
 
-This directory contains complete page templates for the SaaS Admin Dashboard that you can use in your new projects.
+This directory contains complete page templates for various admin dashboards that you can use in your new projects.
 
 ## 🚀 Quick Start
 
@@ -23,14 +23,25 @@ import { SaasAdminPage } from '@tindeveloper/design-system/templates';
 export default function AdminPage() {
   return <SaasAdminPage />;
 }
+
+// pages/crm/index.tsx
+import { CrmAdminPage } from '@tindeveloper/design-system/templates';
+
+export default function CrmPage() {
+  return <CrmAdminPage />;
+}
 ```
 
 ## 📁 Available Templates
 
+### SaaS Admin Dashboard
 - **`saas-admin.tsx`** - Main dashboard page with metrics and overview
 - **`saas-admin/users.tsx`** - User management page
 - **`saas-admin/organizations.tsx`** - Organization management page  
 - **`saas-admin/analytics.tsx`** - Analytics dashboard page
+
+### CRM Admin Dashboard
+- **`crm-admin.tsx`** - Complete CRM dashboard with deals, revenue, and schedule
 
 ## 🎯 Complete Integration
 
@@ -71,10 +82,15 @@ module.exports = {
 ### 4. Access Your Admin Dashboard
 
 Once copied, you can access:
+
+**SaaS Admin Dashboard:**
 - **Main Dashboard**: `http://localhost:3000/saas-admin`
 - **Users**: `http://localhost:3000/saas-admin/users`
 - **Organizations**: `http://localhost:3000/saas-admin/organizations`
 - **Analytics**: `http://localhost:3000/saas-admin/analytics`
+
+**CRM Admin Dashboard:**
+- **CRM Dashboard**: `http://localhost:3000/crm-admin`
 
 ## 🔧 Customization
 
@@ -105,10 +121,20 @@ const customNavigation = saasAdminNavigation.map(item => ({
 
 ## 📋 What You Get
 
+### SaaS Admin Dashboard
 ✅ **Complete responsive dashboard** with metrics and charts  
 ✅ **User management** with search, filters, and actions  
 ✅ **Organization management** with data tables  
 ✅ **Analytics dashboard** with visualizations  
+
+### CRM Admin Dashboard
+✅ **CRM metrics** with deal tracking and revenue analytics  
+✅ **Recent orders table** with customer and product information  
+✅ **Revenue overview** with growth indicators  
+✅ **Sales breakdown** by source and channel  
+✅ **Upcoming schedule** with meetings and tasks  
+
+### Shared Features
 ✅ **Mobile-responsive design** that works on all devices  
 ✅ **Dark mode support** built-in  
 ✅ **Professional styling** with Tailwind CSS  
