@@ -1,0 +1,40 @@
+{
+  "name": "my-design-system",
+  "version": "1.0.0",
+  "description": "Unified component library combining Tailwind UI and TailAdmin components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "sync": "node scripts/sync-components.js",
+    "register": "node dist/builder-registry.js"
+  },
+  "keywords": [
+    "components",
+    "tailwind",
+    "builder.io",
+    "design-system"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@builder.io/react": "^3.2.0",
+    "@builder.io/sdk": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
