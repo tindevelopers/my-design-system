@@ -1,0 +1,125 @@
+# Design System Component Library Rules
+
+## Project Context
+
+This is a unified component library combining Tailwind UI and TailAdmin components for Builder.io integration.
+
+## Component Organization
+
+1. **Tailwind UI Components** → `components/tailwindui/`
+2. **TailAdmin Components** → `components/tailadmin/`
+3. **Custom Components** → `components/custom/`
+
+## Coding Standards
+
+### Component Structure
+
+- Use TypeScript for all components
+- Export components as named exports
+- Include prop types using TypeScript interfaces
+- Add JSDoc comments for all props
+
+### Example Component Structure:
+
+```typescript
+import React from 'react';
+
+export interface ButtonProps {
+  /** Button text */
+  label: string;
+  /** Button variant */
+  variant?: 'primary' | 'secondary' | 'outline';
+  /** Click handler */
+  onClick?: () => void;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  variant = 'primary',
+  onClick,
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={/* Tailwind classes */}
+    >
+      {label}
+    </button>
+  );
+};
+```
+
+## Documentation Requirements
+
+When adding a new component:
+
+1. **Create component file** in appropriate folder
+2. **Update docs/component-library.md** with:
+   - Component name and description
+   - Props table
+   - Usage example
+   - Builder.io registration code
+3. **Update docs/builder-registry.json** with component metadata
+4. **Add to src/builder-registry.ts** for Builder.io registration
+
+## Builder.io Integration
+
+### Component Registration Pattern:
+
+```typescript
+Builder.registerComponent(ComponentName, {
+  name: 'Component Display Name',
+  inputs: [
+    {
+      name: 'propName',
+      type: 'string', // or 'number', 'boolean', 'object', etc.
+      defaultValue: 'default',
+      required: false,
+    },
+  ],
+});
+```
+
+## Naming Conventions
+
+- **Components**: PascalCase (e.g., `Button`, `HeroSection`)
+- **Files**: kebab-case (e.g., `button.tsx`, `hero-section.tsx`)
+- **Props**: camelCase (e.g., `onClick`, `isDisabled`)
+- **CSS Classes**: Use Tailwind utility classes
+
+## Import Paths
+
+- Use relative imports within the same folder
+- Use absolute imports from `src/` for shared utilities
+- Group imports: React → External → Internal
+
+## Tailwind CSS
+
+- Use Tailwind utility classes exclusively
+- Avoid custom CSS unless absolutely necessary
+- Use the extended theme from `tailwind.config.js`
+- Prefer composition over custom styles
+
+## Best Practices
+
+1. **Keep components small and focused**
+2. **Prefer composition over inheritance**
+3. **Use TypeScript strictly** - no `any` types
+4. **Document all props** with JSDoc
+5. **Provide sensible defaults** for optional props
+6. **Test components** in examples folder
+7. **Run `npm run sync`** after adding/updating components
+
+## File Templates
+
+Use the templates in `docs/` as starting points:
+- Component template: See any existing component
+- Documentation template: See docs/component-library.md structure
+
+## Automation
+
+Always run after changes:
+```bash
+npm run sync  # Syncs component registry
+npm run build # Builds TypeScript
+```
